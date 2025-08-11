@@ -1,0 +1,6 @@
+1. build_package.yml   : Added run: python -m build under Build package step to actually create dist/ artifacts.
+2. promote_package.yml : Swapped CLOUDSMITH_STAGING_REPO and CLOUDSMITH_PRODUCTION_REPO values to correct promotion direction (staging → production).
+3. promote_package.yml : Fixed incorrect cloudsmith list package command to cloudsmith list packages so that package queries execute successfully.
+4. release_package.yml : Added Authenticate with Cloudsmith step before pushing package.
+5. release_package.yml : Added id-token: write to permissions for OIDC authentication.
+6. pyproject.toml      : Added missing metadata: name, version, license, and dependencies.
